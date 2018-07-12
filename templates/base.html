@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>{% block headtitle %}{% endblock %}</title>
+{%block scripts %}
+<script type="text/javascript" src="{{ url_for( 'static', filename='js/jquery.min.js' ) }}"></script>
+{% endblock %}
+</head>
+<body>
+
+<h1>{%block bodytitle %}{% endblock %}</h1>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
