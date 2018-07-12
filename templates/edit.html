@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block headtitle %}{{ page.title }}{% endblock %}
+{% block bodytitle %}Editing: {{ page.title }}{% endblock %}
+{% block content %}
+<form action="/update/{{ page.title|urlencode }}" method="post">
+<input type="text" name="edit_title" id="edit_title" value="{{ page.title }}" />
+<textarea name="edit_body" id="edit_body">{{ page.content }}</textarea>
+</form>
+{% endblock %}
